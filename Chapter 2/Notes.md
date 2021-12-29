@@ -160,3 +160,5 @@ b) perimeter x y = x * 2 + y * 2
 
 3. a) f x = x / 2 + 9
 b) f x = x / (2 + 9)
+
+PAGE 105
