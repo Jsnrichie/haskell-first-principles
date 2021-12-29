@@ -104,3 +104,59 @@ Answer:
 areaCircle x = pi * (x * x)
 ```
 
+# Infix Operators
+
+- By default we use **Prefix Syntax** , meaning that the function being applied is at the beginning of the expression rather than the middle.
+- Example: The triple function we made above.
+- There are a group of operators (i.e. arithmetic operators), that are functions but appear by default in an **infix position** (in the middle of values).
+
+Operators are functions which can be used in infix style:
+- All operators are functions
+- Not all functions are operators
+
+**NOTE:** You can sometimes use functions infix style, with a small change in syntax:
+```haskell
+Prelude> 10 `div` 4
+2
+Prelude> div 10 4
+2
+```
+You can also use infix operators in prefix fashion by wrapping them in parentheses:
+```haskell
+Prelude> (+) 100 100
+200
+Prelude> (*) 768395 21356345
+16410108716275
+Prelude> (/) 123123 123
+1001.0
+```
+
+Alphanumeric -> Default: prefix function, not all prefix functions can be made infix.
+
+Symbol       -> Default: infix operator,  can be made prefix by wrapping it in parentheses.
+
+## Associativity and precedence
+
+We can ask GHCi for information such as associativity and precedence of operators and functions by using the :info command.
+
+<img width="740" alt="Screen Shot 2021-12-29 at 3 21 02 PM" src="https://user-images.githubusercontent.com/96701698/147700457-c6e74f70-f1fe-4906-9bea-4e7b754dfd48.png">
+
+<img width="756" alt="Screen Shot 2021-12-29 at 3 26 13 PM" src="https://user-images.githubusercontent.com/96701698/147700773-80ed735a-e3d5-4022-8f55-21524c34b376.png">
+
+<img width="748" alt="Screen Shot 2021-12-29 at 3 26 56 PM" src="https://user-images.githubusercontent.com/96701698/147700818-e223679a-7788-4304-822b-9f455ff12af7.png">
+
+<img width="746" alt="Screen Shot 2021-12-29 at 3 28 38 PM" src="https://user-images.githubusercontent.com/96701698/147700910-e741cbcb-9750-4caf-965c-5c19e7ca736e.png">
+
+# Exercises: Parentheses and Association
+
+Below are some pairs of functions that are alike except for
+parenthesization. Read them carefully and decide if the parentheses change the results of the function.
+
+1. a) 8 + 7 * 9
+b) (8 + 7) * 9
+
+2. a) perimeter x y = (x * 2) + (y * 2)
+b) perimeter x y = x * 2 + y * 2
+
+3. a) f x = x / 2 + 9
+b) f x = x / (2 + 9)
