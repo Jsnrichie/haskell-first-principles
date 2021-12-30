@@ -310,3 +310,20 @@ Prelude> rem 3 12
 
 #### One key difference here is that, in Haskell (not in all languages), if one or both arguments are negative, the results of mod will have the same sign as the divisor, while the result of rem will have the same sign as the dividend.
 
+```haskell
+Prelude> (-5) `mod` 2
+1
+Prelude> 5 `mod` (-2)
+-1
+Prelude> (-5) `mod` (-2)
+-1
+
+--But:
+
+Prelude> (-5) `rem` 2
+-1
+Prelude> 5 `rem` (-2)
+1
+Prelude> (-5) `rem` (-2)
+-1
+```
