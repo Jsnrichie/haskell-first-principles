@@ -308,7 +308,7 @@ Prelude> rem 3 12
 3
 ```
 
-#### One key difference here is that, in Haskell (not in all languages), if one or both arguments are negative, the results of mod will have the same sign as the divisor, while the result of rem will have the same sign as the dividend.
+**One key difference here is that, in Haskell (not in all languages), if one or both arguments are negative, the results of mod will have the same sign as the divisor, while the result of rem will have the same sign as the dividend.**
 
 ```haskell
 Prelude> (-5) `mod` 2
@@ -327,3 +327,36 @@ Prelude> 5 `rem` (-2)
 Prelude> (-5) `rem` (-2)
 -1
 ```
+
+## Negative Numbers
+
+TLDR: the way operators work create a unique situation for negative numbers. Unlike in everyday math negative numbers cant be represented as they would in everyday situations.
+
+An expression like :
+
+```haskell
+Prelude> 1000 + -9
+<interactive>:3:1:
+Precedence parsing error
+cannot mix ‘+’ [infixl 6] and
+prefix `-` [infixl 6]
+in the same infix expression
+```
+would not work.
+
+Instead we use a method like:
+
+```haskell
+Prelude> 1000 + (-9)
+991
+
+--OR
+
+Prelude> 1000 + (negate 9)
+991
+```
+
+# Parenthesization
+
+
+
