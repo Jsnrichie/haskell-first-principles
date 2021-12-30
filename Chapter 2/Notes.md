@@ -357,6 +357,20 @@ Prelude> 1000 + (negate 9)
 ```
 
 # Parenthesization
+## Parenthesizing infix operators
+
+**Order matters
+
+```haskell
+Prelude> (1/) 2
+0.5
+Prelude> (/1) 2
+2.0
+```
+# Let and Where
+
+**let introduces an expression, so it can be used wherever you can have an expression, but where is a declaration and is bound to a surrounding syntactic construct.
+
 
 
 
