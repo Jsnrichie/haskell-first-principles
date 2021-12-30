@@ -283,3 +283,8 @@ f = x + y
 - In our 12-hour clock, 12 is equivalent to both itself and to 0, so the time at 12:00 is also, in some sense 0:00. Arithmetic modulo 12 means that 12 is both 12 and 0.
 
 For example, if the time is now 8:00 and you want to know what time it will be 8 hours from now, you don’t simply add 8 + 8 and get a result of 16 o’clock. Instead, you wrap the count around every 12 hours. So, adding 8 hours to 8:00 means that we add 4 hours to get to the 12, and at the 12 we start over again as if it’s 0 and add the remaining 4 hours of our 8, for an answer of 4:00.
+
+```haskell
+Prelude> mod 16 12
+3
+```
