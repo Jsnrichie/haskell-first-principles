@@ -273,7 +273,7 @@ f = x + y
 
 <img width="729" alt="Screen Shot 2021-12-30 at 2 53 45 PM" src="https://user-images.githubusercontent.com/96701698/147783971-8f06c127-4303-4776-949c-7b7e94fd78db.png">
 
-## Using mod
+## Using mod and rem
 
 - mod gives the remainder of a modular division
 - numbers “wrap around” upon reaching a certain value, called the modulus
@@ -288,3 +288,25 @@ For example, if the time is now 8:00 and you want to know what time it will be 8
 Prelude> mod 16 12
 4
 ```
+
+- In most cases mod and rem will give the same result.
+
+```haskell
+Prelude> mod 16 12
+4
+Prelude> rem 16 12
+4
+
+Prelude> mod 21 12
+9
+Prelude> rem 21 12
+9
+
+Prelude> mod 3 12
+3
+Prelude> rem 3 12
+3
+```
+
+#### One key difference here is that, in Haskell (not in all languages), if one or both arguments are negative, the results of mod will have the same sign as the divisor, while the result of rem will have the same sign as the dividend.
+
