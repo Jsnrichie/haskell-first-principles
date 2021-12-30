@@ -152,13 +152,13 @@ We can ask GHCi for information such as associativity and precedence of operator
 Below are some pairs of functions that are alike except for
 parenthesization. Read them carefully and decide if the parentheses change the results of the function.
 
-1. a) 8 + 7 * 9
-b) (8 + 7) * 9
+1.  - 8 + 7 * 9
+    - (8 + 7) * 9
 
-2. a) perimeter x y = (x * 2) + (y * 2)
-b) perimeter x y = x * 2 + y * 2
+2. - perimeter x y = (x * 2) + (y * 2)
+   - perimeter x y = x * 2 + y * 2
 
-3. a) f x = x / 2 + 9
-b) f x = x / (2 + 9)
+3. - f x = x / 2 + 9
+   - f x = x / (2 + 9)
 
 PAGE 105
