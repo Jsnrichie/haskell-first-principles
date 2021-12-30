@@ -286,5 +286,5 @@ For example, if the time is now 8:00 and you want to know what time it will be 8
 
 ```haskell
 Prelude> mod 16 12
-3
+4
 ```
