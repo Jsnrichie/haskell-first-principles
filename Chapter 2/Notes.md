@@ -161,4 +161,111 @@ parenthesization. Read them carefully and decide if the parentheses change the r
 3. - f x = x / 2 + 9
    - f x = x / (2 + 9)
 
-PAGE 105
+# Declaring values
+
+The order of declarations in a source code file doesn’t matter because GHCi loads the entire file at once, so it knows all the values that have been defined.
+
+when you enter them one by one into the REPL, the order does matter.
+
+- [x] Create file learn.hs
+- [x] declare the name of our module so it can be imported by name in a project. **NB: Module name must be capitalized**
+
+```haskell
+-- learn.hs
+
+module Learn where
+
+x = 10 * 5 + y
+myResult = x * 5
+y = 10
+-- The order doesn't matter in the source file
+```
+
+## Troubleshooting 
+
+### Indentaion
+- indentation of Haskell code is significant and can change the meaning of the code. ***USE SPACES NOT TABS*** 
+- code that is part of an expression should be indented under the beginning of that expression, even when the beginning of the expression is not at the leftmost margin
+- parts of the expression that are grouped should be indented to the same level.
+
+Example:
+```haskell
+let
+ x = 3
+ y = 4
+-- or
+let x = 3
+    y = 4
+```
+
+Notice that the terms x and y are indented the same.
+
+It is incorrect to write:
+```haskell
+let x = 3
+y = 4
+-- or
+let
+x = 3
+ y = 4
+```
+
+Situation 1:
+```haskell
+module Learn where
+-- module declaration at the top
+x = 10
+* 5 + y
+myResult = x * 5
+y = 10
+```
+
+Problem: * causes parse error
+
+Solution: declare x in one line OR indent rest of declaration past the =
+
+```haskell
+x = 10 * 5 + y
+--or
+x = 10
+    * 5 + y
+```
+
+Situation 2: 
+```haskell
+module Learn where
+-- module declaration at the top
+ x = 10 * 5 + y
+myResult = x * 5
+y = 10
+```
+
+Problem: x not in line with other functions, either indent the other functions or remove indentation
+
+# Exercise: Heal the sick
+
+Fix the following code
+
+```haskell
+-- Q1
+let area x = 3. 14 * (x * x)
+
+-- error -> space in 3.14
+let area x = 3.14 * (x * x)
+
+--Q2
+let double x = b * 2
+
+-- error -> b not defined
+let double x = x * 2
+
+--Q3
+x = 7
+ y = 10
+f = x + y
+
+-- error -> declaration y was indented and couldnt be accessed by f
+x = 7
+y = 10
+f = x + y
+```
