@@ -379,6 +379,9 @@ Prelude> (/1) 2
 
 - [x] Created headCode.js 
 
+# Chapter Exercise
+
+- [x] Created Exercise.js
 
 
 
