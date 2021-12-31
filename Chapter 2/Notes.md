@@ -372,7 +372,12 @@ Prelude> (/1) 2
 - **let introduces an expression, so it can be used wherever you can have an expression.**
 - **where is a declaration and is bound to a surrounding syntactic construct.**
 
+- [x] Created file FunctionWithWhere.hs
+- [x] Created file FunctionWithLet.hs
 
+# Exercises: A Head Code
+
+- [x] Created headCode.js 
 
 
 
